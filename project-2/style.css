@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: rgb(13, 12, 12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card{
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid white;
+}
+#card img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+#card i{
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%) scale(0);
+    opacity: 0.8;
+    transition: transform ease-in 0.4s;
+}
