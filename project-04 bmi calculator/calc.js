@@ -1,22 +1,22 @@
 const form = document.querySelector('form');
 
-form.addEventListener('submit', function(b){
-    b.preventDefault();
- 
-    const height = parseInt(document.querySelector('#height').value);
-    const weight = parseInt(document.querySelector('#weight').value);
-    const results =document.querySelector('#results');
+form.addEventListener('submit', function (b) {
+        b.preventDefault();
 
-    if(height === '' || height  < 0 || isNaN(height)){
-            results.innerHTML = `please give valid height ${height}`
-    }else if(weight === '' || weight  < 0 || isNaN(weight)){
-        results.innerHTML = `please give valid weight ${weight}`;
-} else{
- const bmi = (weight / ((height*height)/10000)).toFixed(2)
- //show result
- results.innerHTML = ` <span>${bmi}</span>`
-}
+        const height = parseInt(document.querySelector('#height').value);
+        const weight = parseInt(document.querySelector('#weight').value);
+        const results = document.querySelector('#results');
 
-/// aslo show under weight over wight selff
+        if (height === '' || height < 0 || isNaN(height)) {
+                results.innerHTML = `please give valid height ${height}`
+        } else if (weight === '' || weight < 0 || isNaN(weight)) {
+                results.innerHTML = `please give valid weight ${weight}`;
+        } else {
+                const bmi = (weight / ((height * height) / 10000)).toFixed(2)
+                //show result
+                results.innerHTML = ` <span>${bmi}</span>`
+        }
+
+        /// aslo show under weight over wight selff
 
 })
